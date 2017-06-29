@@ -1,3 +1,80 @@
 * {
   background-color: #3498db;
 }
+
+ul {
+  position: relative;
+  width: 65px;
+  height: 50px;
+  background: black;
+}
+
+.one {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 5px;
+  top: -7px;
+  background-color: black;
+}
+
+.two {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 5px;
+  top: 35px;
+  background-color: black;
+}
+
+.three {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 75px;
+  top: -7px;
+  background-color: black;
+}
+
+.four {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 75px;
+  top: 35px;
+  background-color: black;
+}
+
+.smile {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background-color: yellow;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 0;
+  top: 26px;
+  left: 47px;
+}
+
+.eye1 {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  background-color: yellow;
+  top: 21px;
+  left: 53px;
+}
+
+.eye2 {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  background-color: yellow;
+  top: 21px;
+  left: 48px;
+}
