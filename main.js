@@ -90,4 +90,7 @@ window.addEventListener('keydown', function (event) {
   if (event.keyCode === 78) {
     Car.halt(smiles)
   }
+  if (event.keyCode === 40) {
+    car.style.transform = 'rotate(0.25turn)'
+  }
 })
