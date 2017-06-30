@@ -82,12 +82,3 @@ window.addEventListener('keydown', function (event) {
     }, 1)
   }
 })
-
-// car.style.left = 300 + 'px'
-// "300px"
-// car.style.left = smiles.location
-// (2) [145, 0]
-// smiles.location
-// (2) [155, 0]
-// car.style.left = smiles.location[0] + 'px'
-// "230px"
