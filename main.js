@@ -30,6 +30,7 @@ function createCar() {
   car.appendChild(carUl)
 
   car.style.left = smiles.location[0] + 'px'
+  car.style.top = smiles.location[1] + 'px'
 }
 
 class Car {
@@ -77,11 +78,13 @@ const smiles = new Car('east', 5, [0, 0])
 createCar(smiles)
 
 window.addEventListener('load', function () {
-  alert('Press Spacebar to Begin and "n" to Stop.')
+  alert('WELCOME TO SMILEY DRIVER!!')
+  alert('CONTROLS: \n\nPress "Spacebar" to Begin. \nPress "N" to stop. \nPress "Down Arrow" to move down. \nPress "Left Arrow" to move left. \nPress "Up Arrow" to move up. \nPress "Right Arrow" to move right. \nAdditional "Spacebar" presses will increase speed.')
 })
 
 window.addEventListener('keydown', function (event) {
   if (event.keyCode === 32) {
+    smiles.speed = 5
     Car.start(smiles)
     setInterval(function () {
       createCar(smiles)
@@ -92,5 +95,18 @@ window.addEventListener('keydown', function (event) {
   }
   if (event.keyCode === 40) {
     car.style.transform = 'rotate(0.25turn)'
+    smiles.direction = 'south'
+  }
+  if (event.keyCode === 37) {
+    car.style.transform = 'rotate(0.5turn)'
+    smiles.direction = 'west'
+  }
+  if (event.keyCode === 38) {
+    car.style.transform = 'rotate(0.75turn)'
+    smiles.direction = 'north'
+  }
+  if (event.keyCode === 39) {
+    car.style.transform = 'rotate(0turn)'
+    smiles.direction = 'east'
   }
 })
