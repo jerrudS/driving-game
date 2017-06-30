@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 function createCar() {
   const carUl = document.createElement('ul')
@@ -25,8 +26,68 @@ function createCar() {
   carUl.appendChild(eye1)
   carUl.appendChild(eye2)
 
-  const carDiv = document.querySelector('.car')
+  const car = document.querySelector('.car')
+  car.innerHTML = ''
+  car.appendChild(carUl)
 
-  carDiv.appendChild(carUl)
+  car.style.left = smiles.location[0] + 'px'
 }
-createCar()
+
+class Car {
+  constructor(direction, speed, location) {
+    this.direction = direction
+    this.speed = speed
+    this.location = location
+  }
+  turn(direction) {
+    this.direction = direction
+  }
+  accelerate(amount) {
+    this.speed += amount
+  }
+  move() {
+    switch (this.direction) {
+      case 'north':
+        this.location[1] -= this.speed
+        break
+      case 'south':
+        this.location[1] += this.speed
+        break
+      case 'east':
+        this.location[0] += this.speed
+        break
+      case 'west':
+        this.location[0] -= this.speed
+    }
+  }
+  static start(car) {
+    setInterval(function () {
+      car.move()
+    }, 200)
+  }
+}
+
+const smiles = new Car('east', 5, [0, 0])
+createCar(smiles)
+
+window.addEventListener('load', function () {
+  alert('Press Spacebar to Begin!')
+})
+
+window.addEventListener('keydown', function (event) {
+  if (event.keyCode === 32) {
+    Car.start(smiles)
+    setInterval(function () {
+      createCar(smiles)
+    }, 1)
+  }
+})
+
+// car.style.left = 300 + 'px'
+// "300px"
+// car.style.left = smiles.location
+// (2) [145, 0]
+// smiles.location
+// (2) [155, 0]
+// car.style.left = smiles.location[0] + 'px'
+// "230px"
