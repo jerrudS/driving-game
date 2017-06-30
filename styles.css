@@ -13,6 +13,10 @@ ul {
   background: black;
 }
 
+li {
+  list-style-type: none;
+}
+
 .one {
   position: absolute;
   width: 25px;
