@@ -2,6 +2,10 @@
   background-color: #3498db;
 }
 
+.car {
+  position: absolute;
+}
+
 ul {
   position: relative;
   width: 65px;
