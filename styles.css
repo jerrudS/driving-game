@@ -13,6 +13,10 @@ ul {
   background: black;
 }
 
+li {
+  list-style-type: none;
+}
+
 .one {
   position: absolute;
   width: 25px;
@@ -55,30 +59,30 @@ ul {
 
 .smile {
   position: absolute;
-  width: 10px;
-  height: 5px;
+  width: 30px;
+  height: 15px;
   background-color: yellow;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   border-top: 0;
   top: 26px;
-  left: 47px;
+  left: 38px;
 }
 
 .eye1 {
   position: absolute;
-  height: 3px;
-  width: 3px;
+  height: 8px;
+  width: 8px;
   background-color: yellow;
-  top: 21px;
-  left: 53px;
+  top: 12px;
+  left: 59px;
 }
 
 .eye2 {
   position: absolute;
-  height: 3px;
-  width: 3px;
+  height: 8px;
+  width: 8px;
   background-color: yellow;
-  top: 21px;
-  left: 48px;
+  top: 12px;
+  left: 39px;
 }

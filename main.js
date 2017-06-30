@@ -26,7 +26,6 @@ function createCar() {
   carUl.appendChild(eye1)
   carUl.appendChild(eye2)
 
-  const car = document.querySelector('.car')
   car.innerHTML = ''
   car.appendChild(carUl)
 
@@ -44,6 +43,9 @@ class Car {
   }
   accelerate(amount) {
     this.speed += amount
+  }
+  stop() {
+    this.speed = 0
   }
   move() {
     switch (this.direction) {
@@ -65,13 +67,17 @@ class Car {
       car.move()
     }, 200)
   }
+  static halt(car) {
+    car.stop()
+  }
 }
 
+const car = document.querySelector('.car')
 const smiles = new Car('east', 5, [0, 0])
 createCar(smiles)
 
 window.addEventListener('load', function () {
-  alert('Press Spacebar to Begin!')
+  alert('Press Spacebar to Begin and "n" to Stop.')
 })
 
 window.addEventListener('keydown', function (event) {
@@ -80,5 +86,8 @@ window.addEventListener('keydown', function (event) {
     setInterval(function () {
       createCar(smiles)
     }, 1)
+  }
+  if (event.keyCode === 78) {
+    Car.halt(smiles)
   }
 })
